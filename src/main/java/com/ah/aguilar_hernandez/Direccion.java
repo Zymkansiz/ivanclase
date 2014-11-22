@@ -18,6 +18,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.validation.constraints.Size;
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonManagedReference;
 
 /**
  *
@@ -45,8 +47,17 @@ public class Direccion implements Serializable {
     @Column(name = "ESTADO")
     private String estado;
     @JoinColumn(name = "ID_USUARIO", referencedColumnName = "ID_USUARIO")
+    @JsonIgnore
     @ManyToOne
     private Usuario idUsuario;
+
+    public Direccion(String calle, Integer cp, String colonia, String estado) {
+        this.calle = calle;
+        this.cp = cp;
+        this.colonia = colonia;
+        this.estado = estado;
+      
+    }
 
     public Direccion() {
     }

@@ -5,6 +5,7 @@
  */
 package com.ah.aguilar_hernandez;
 
+import com.ah.model.DAOUsuarioImpl;
 import java.util.HashSet;
 import java.util.Set;
 import org.hibernate.Session;
@@ -22,7 +23,24 @@ public class ProbarUsuarioDireccion {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    
+    public static void main(String[] args) throws Exception {
+        DAOUsuarioImpl du=new DAOUsuarioImpl();
+        System.out.println(du.obtenerTodos());
+    }
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   /* public static void main(String[] args) {
   SessionFactory factory= HibernateUtilidades.getSessionFactory();
       Session sesion= factory.openSession();
       Transaction tranza= sesion.beginTransaction();
@@ -54,3 +72,4 @@ public class ProbarUsuarioDireccion {
     }
     
 }
+*/

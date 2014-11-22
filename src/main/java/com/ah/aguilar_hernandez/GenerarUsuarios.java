@@ -19,9 +19,11 @@ public class GenerarUsuarios {
         Usuario u2=new Usuario("Josue",35,60000,d2);
         Usuario u3=new Usuario("Mariel",29,15000,d3);
         Usuario u4=new Usuario("Carmen",34,60000,d4);
+        
         usuarios.add(u1);
         usuarios.add(u2);
         usuarios.add(u3);
+        usuarios.add(u4);
         
         return usuarios;
     }
